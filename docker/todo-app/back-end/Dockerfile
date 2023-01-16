@@ -1,12 +1,12 @@
 FROM node:14
 
-WORKDIR /usr/src/app/back-end
+WORKDIR /app
 
 EXPOSE 3001
 
-ADD node_modules.tar.gz ./
+ADD node_modules.tar.gz .
 
-COPY ./ ./
+COPY . .
 
 ENTRYPOINT [ "npm", "start" ]
 
